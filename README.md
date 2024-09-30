@@ -7,6 +7,7 @@
 - Vineet Jaiswal
 - Vaishnav Vernekar
 
+**Project Submission Date:** May 7, 2024
 
 ---
 
@@ -82,4 +83,22 @@ We used `train_test_split()` with `test_size=0.2` to achieve this.
 - **Accuracy:** 53.50%
 - **Challenges:** Computational restrictions impacted the model performance.
 
-### Pre-Trained Word
+### Pre-Trained Word Embeddings (Word2Vec) + XGBoost / SVM / Neural Networks
+- **Word2Vec Parameters:** `vector_size=300`, `window=5`
+- **Models Tested:**
+  - **XGBoost:** Accuracy = 65.53%
+  - **SVM (RBF Kernel):** Accuracy = 69.78%
+  - **Neural Networks:** Accuracy = 70.19%
+- **Challenges:** The model struggled with distinguishing between ratings 1 and 2, and 4 and 5.
+
+---
+
+## Visualizing Results
+
+We used PCA to visualize word embeddings and classification results. Confusion matrices were generated using `matplotlib` and `seaborn` to visualize the performance of each model.
+
+---
+
+## Conclusion
+
+The project successfully demonstrated the use of NLP and machine learning models in predicting customer ratings from text reviews. Pre-trained embeddings such as Word2Vec combined with advanced models like SVM and Neural Networks provided the best results, with an accuracy of 70.19%. However, there were issues in correctly classifying adjacent ratings (e.g., 1 vs 2, 4 vs 5), indicating that additional tuning and more advanced architectures could further improve performance.
